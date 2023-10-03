@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>JK Car</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+<!--
+    Navbar
+-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="">JK CAR</a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-2" aria-current="page" href="#Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="#about">About</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+                <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title d-flex align-items-center">
+                        <i class="bi bi-person-fill fs-3 me-2"></i>
+                        User Login
+                    </h5>
+                    <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control shadow-none">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control shadow-none">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <button type="submit" class="btn btn-dark shadow-none">Login</button>
+                        <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title d-flex align-items-center">
+                        <i class="bi bi-person-lines-fill fs-3 me-2"></i>
+                        User Register
+                    </h5>
+                    <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                        Note: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quaerat atque illum rerum itaque quas culpa rem.
+                        Culpa saepe ex dicta deserunt qui obcaecati repellendus vero maxime totam, accusantium officiis!
+                    </span>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control shadow-none">
+                            </div>
+                            <div class="col-md-6 p-0 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control shadow-none">
+                            </div>
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="number" class="form-control shadow-none">
+                            </div>
+                            <div class="col-md-6 p-0 mb-3">
+                                <label class="form-label">Address</label>
+                                <textarea class="form-control" rows="1"></textarea>
+                            </div>
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="Password" class="form-control shadow-none">
+                            </div>
+                            <div class="col-md-6 p-0 mb-3">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="Password" class="form-control shadow-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-1">
+                    <button type="submit" class="btn btn-dark shadow-none m-2">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--
+    Header
+-->
+<!-- Home -->
+<div class="container my-3" id="Home">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1.jpg" class="d-block w-100" alt="1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/2.jpg" class="d-block w-100" alt="2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/3.jpg" class="d-block w-100" alt="3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/4.jpg" class="d-block w-100" alt="4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<!-- Products -->
+<div id="products" class="row row-cols-1 row-cols-md-2 g-4 m-3">
+    <div class="col">
+      <div class="card">
+        <img src="images/1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Car One</h5>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus a labore sed molestiae at voluptatum, eos omnis quasi? Voluptates, excepturi?</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="images/2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Car Two</h5>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus a labore sed molestiae at voluptatum, eos omnis quasi? Voluptates, excepturi?</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="images/3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Car Three</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus a labore sed molestiae at voluptatum, eos omnis quasi? Voluptates, excepturi?</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="images/4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Car Four</h5>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus a labore sed molestiae at voluptatum, eos omnis quasi? Voluptates, excepturi?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Contact us -->
+<section id="contact" class="contact my-5 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div class="section-head fw-bolder text-center position-relative">
+                <h2>Contact Us.</h2>
+            </div>
+
+            <div class="col-md-10 offset-1 mt-5">
+                <div class="container d-flex justify-content-between text-center mb-5">
+
+                    <div class="col-md-4">
+                        <div class="item">
+                            <span class="icon"><i class="fa fa-location-arrow fa-2 border border-1 bg-light border-opacity-25 p-3 rounded-circle" aria-hidden="true"></i></span>
+                            <h6 class="mt-3 fw-bolder">Address</h6>
+                            <p class="text-muted">6834 Hollywood Blvd - Los Angeles CA</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="item">
+                            <span class="icon"><i class="fa fa-envelope fa-2 border border-1 bg-light border-opacity-25 p-3 rounded-circle" aria-hidden="true"></i></span>
+                            <h6 class="mt-3 fw-bolder">Email</h6>
+                            <p class="text-muted">Support@website.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="item">
+                            <span class="icon"><i class="fa fa-phone fa-2 border border-1 bg-light border-opacity-25 p-3 rounded-circle" aria-hidden="true"></i></span>
+                            <h6 class="mt-3 fw-bolder">Phone</h6>
+                            <p class="text-muted">+20 010 2517 8918</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <form class="form">
+                    <div class="container">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="name" type="text" name="name" placeholder="Name" required="required" class="w-100 bg-light border-0 p-2 rounded-1">
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <input id="email" type="email" name="email" placeholder="Email" required="required" class="w-100 bg-light border-0 p-2 rounded-1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 fs-6 fw-lighter">
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Message" rows="6" cols="105" required="required" class="bg-light border-0 p-2 rounded-1"></textarea>
+                                </div>
+
+                                <input type="submit" value="submit" class="btn btn-dark px-4 me-2 mt-3">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About -->
+<section id="about" class="about-mf p-3 mb-5 ms-auto bg-body rounded ">
+    <div class="container my-5 mx-auto">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="about-img">
+                    <img src="images/5.jpg" class="img-fluid rounded b-shadow-a" alt="hero">
+                </div>
+            </div>
+            <div class="col-md-8 ">
+                <div class="about-me pt-4 pt-md-0 ">
+                    <div class="title-box-2">
+                        <h3 class="title-left fs-4 fw-bolder">JK CAR</h3>
+                    </div>
+                    <p class="lead fs-6 mb-3 text-muted">Lorem
+                        Ipsum
+                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever It has survived not only five centuries, but also the
+                        leap
+                        into electronic but also
+                        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the
+                        1960s with the release
+                        of Letraset sheets containing</p>
+                </div>
+                
+                <button type="button" class="btn btn-light px-4 border border-dark mt-3">Contact Me</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+    Footer
+-->
+
+<div class="container bg-white mt-5">
+    <div class="row">
+        <div class="col-lg-4 p-4">
+            <h3 class="fs-3 mb-2">JK CAR</h3>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quaerat atque illum rerum itaque quas culpa rem.
+                    Culpa saepe ex dicta deserunt qui obcaecati repellendus vero maxime totam, accusantium officiis!
+            </p>
+        </div>
+        <div class="col-lg-4 p-4">
+            <h5 class="mb-3">Links</h5>
+            <a href="#Home" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a> <br>
+            <a href="#products" class="d-inline-block mb-2 text-dark text-decoration-none">Products</a> <br>
+            <a href="#contact" class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a> <br>
+            <a href="#about" class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
+        </div>
+        <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Follow us</h5>
+        <a href="#" class="d-inline-bloc text-dark mb-2 text-decoration-none">
+                    <i class="bi bi-twitter me-l"></i>
+                        Twitter
+                </a>
+                <br>
+                <a href="#" class="d-inline-block text-dark mb-2 text-decoration-none">
+                    <i class="bi bi-facebook me-l"></i>
+                        Facebook
+                </a>
+                <br>
+                <a href="#" class="d-inline-block text-dark text-decoration-none">
+                    <i class="bi bi-instagram me-l"></i>
+                        Instagram
+                </a>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
